@@ -63,29 +63,28 @@ ENV NODE_ENV=production
 ENV PORT=2567
 ENV HOST=0.0.0.0
 
-# Copy manifests and installed node_modules from builder
-COPY package*.json ./
-COPY --from=builder /app/node_modules ./node_modules
+# Copy manifests and installed node_modules from builder with node user ownership
+COPY --chown=node:node package*.json ./
+COPY --chown=node:node --from=builder /app/node_modules ./node_modules
 
 # Copy server code, protocol packages, tsconfig, scripts, and built dist
-COPY --from=builder /app/packages ./packages
-COPY --from=builder /app/apps ./apps
-COPY --from=builder /app/scripts ./scripts
-COPY --from=builder /app/tsconfig*.json ./
-COPY --from=builder /app/dist ./dist
+COPY --chown=node:node --from=builder /app/packages ./packages
+COPY --chown=node:node --from=builder /app/apps ./apps
+COPY --chown=node:node --from=builder /app/scripts ./scripts
+COPY --chown=node:node --from=builder /app/tsconfig*.json ./
 
-# Create durable outbox directory and set permissions for node user
+# Create durable outbox directory and ensure full permissions for node user
 RUN mkdir -p /app/.data/history-outbox && \
-    chown -R node:node /app/.data
+    chown -R node:node /app
 
 # Run as non-root user for container security
 USER node
 
 EXPOSE 2567
 
-# Healthcheck verifies HTTP API availability and database connectivity via /api/guest
+# Healthcheck verifies HTTP API availability and database connectivity via /readyz
 HEALTHCHECK --interval=15s --timeout=5s --start-period=15s --retries=5 \
-  CMD node -e "fetch('http://127.0.0.1:2567/api/guest').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"
+  CMD node -e "fetch('http://127.0.0.1:2567/readyz').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"
 
-# Start authoritative Colyseus game server
-CMD ["npx", "tsx", "apps/game-server/src/index.ts"]
+# Start authoritative Colyseus game server directly via local tsx binary
+CMD ["./node_modules/.bin/tsx", "apps/game-server/src/index.ts"]

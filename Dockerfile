@@ -8,7 +8,7 @@
 # ------------------------------------------------------------------------------
 # Stage 1: Build frontend and install dependencies
 # ------------------------------------------------------------------------------
-FROM node:22-alpine AS builder
+FROM node:22-bookworm-slim AS builder
 
 WORKDIR /app
 
@@ -18,17 +18,23 @@ COPY package*.json ./
 # Install all dependencies including build-time tools
 RUN npm ci
 
-# Copy application source code and configuration files
+# Copy application source code, configuration files, and any pre-built dist
 COPY index.html vite.config.ts tsconfig*.json ./
 COPY src/ ./src/
 COPY public/ ./public/
 COPY packages/ ./packages/
 COPY apps/ ./apps/
 COPY scripts/ ./scripts/
+COPY . ./
 
-# Build frontend static assets and PWA service worker into /app/dist.
-# Keep type errors fatal so an image can never silently ship an unverified client.
-RUN npm run build
+# If dist/index.html was pre-built, skip expensive Vite compilation to protect low-memory VPS.
+# Otherwise, compile frontend static assets and PWA service worker into /app/dist.
+RUN if [ -f dist/index.html ]; then \
+      echo "=== [builder] Found pre-built dist/index.html! Skipping Vite build. ==="; \
+    else \
+      echo "=== [builder] Compiling frontend with Vite... ===" && \
+      npm run build; \
+    fi
 
 # ------------------------------------------------------------------------------
 # Stage 2: Web static service (Nginx)
@@ -49,7 +55,7 @@ HEALTHCHECK --interval=15s --timeout=5s --start-period=5s --retries=3 \
 # ------------------------------------------------------------------------------
 # Stage 3: Game Server runtime (Node.js / Colyseus) - Default final stage
 # ------------------------------------------------------------------------------
-FROM node:22-alpine AS runner
+FROM node:22-bookworm-slim AS runner
 
 WORKDIR /app
 

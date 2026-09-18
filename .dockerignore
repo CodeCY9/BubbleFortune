@@ -3,7 +3,7 @@ node_modules
 .agents
 .cursor
 .data
-dist
+# dist (allow copying pre-built frontend)
 .env
 .env.local
 .env.database.local

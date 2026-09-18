@@ -1,0 +1,1 @@
+const n="classic-26-v1",o=26,s=[1,5,10,25,50,75,100,200,300,400,500,750,1e3,2500,5e3,1e4,25e3,5e4,75e3,1e5,2e5,3e5,4e5,5e5,75e4,1e6],t=[6,5,4,3,2,1,1,1,1],a=s;function c(e){return e.toLocaleString("en-US")}export{a as M,t as R,o as T,n as a,s as b,c as f};

@@ -426,7 +426,7 @@ export function DuelApp() {
                       className="duel-action-btn accept"
                       style={{ minHeight: '38px', padding: '6px 16px', fontSize: '0.85rem' }}
                     >
-                      {msg('duel.entrance.recover')}
+                      {msg('duel.entrance.recoverOriginal')}
                     </button>
                     <button
                       type="button"

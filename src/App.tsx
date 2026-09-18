@@ -19,7 +19,7 @@ import { ForfeitModal } from './components/ForfeitModal';
 import { RoundOpeningIndicator } from './components/RoundOpeningIndicator';
 import { useTheme } from './themes';
 import { Ticker } from './components/Ticker';
-import { OpenedBoxData, MONEY_VALUES } from './types/game';
+import { BoxData, OpenedBoxData, MONEY_VALUES } from './types/game';
 import { Sparkles, AlertCircle, RefreshCw, X, Trophy, Home } from 'lucide-react';
 import { translate, useLanguage } from './i18n';
 
@@ -272,7 +272,7 @@ export function App({ mode = 'classic' }: { mode?: 'classic' | 'challenge' }) {
     }
   }, [finalRevealStage, finalTargetBoxId, handleBoxAnimationComplete, preferences.fast, effectiveReducedMotion]);
 
-  const displayBoxes = useMemo(() => {
+  const displayBoxes: BoxData[] = useMemo(() => {
     if (!settlement || !finalTargetBoxId || finalRevealStage === 'IDLE') return boxes;
 
     return boxes.map((b) => {
@@ -285,14 +285,10 @@ export function App({ mode = 'classic' }: { mode?: 'classic' | 'challenge' }) {
             revealedAmount: settlement.wonAmount,
           };
         }
-        return {
-          ...b,
-          value: settlement.wonAmount,
-          revealedAmount: settlement.wonAmount,
-        };
+        return b;
       }
       if (!b.isOpened && b.id !== finalTargetBoxId) {
-        const boxAmount = settlement.allBoxes.find((ab) => ab.id === b.id)?.amount;
+        const boxAmount = settlement.allBoxes?.find((ab) => ab.id === b.id)?.amount;
         if (boxAmount !== undefined && (finalRevealStage === 'REVEALED' || finalRevealStage === 'DONE')) {
           return {
             ...b,

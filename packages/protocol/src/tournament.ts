@@ -219,7 +219,16 @@ export function validateTournamentCommand(raw: unknown): TournamentValidationRes
   if (typeof value.tournamentId !== 'string' || value.tournamentId.length === 0 || value.tournamentId.length > MAX_STRING_LEN) {
     return { valid: false, error: { code: 'INVALID_PAYLOAD', message: 'Invalid tournament ID' } };
   }
-  if (!Number.isInteger(value.stateVersion) || !Number.isInteger(value.commandSequence) || value.stateVersion < 1 || value.commandSequence < 1) {
+  const stateVersion = value.stateVersion;
+  const commandSequence = value.commandSequence;
+  if (
+    typeof stateVersion !== 'number' ||
+    typeof commandSequence !== 'number' ||
+    !Number.isInteger(stateVersion) ||
+    !Number.isInteger(commandSequence) ||
+    stateVersion < 1 ||
+    commandSequence < 1
+  ) {
     return { valid: false, error: { code: 'INVALID_PAYLOAD', message: 'Invalid command version or sequence' } };
   }
   if (typeof value.idempotencyKey !== 'string' || value.idempotencyKey.length === 0 || value.idempotencyKey.length > MAX_STRING_LEN) {
@@ -241,5 +250,5 @@ export function validateTournamentCommand(raw: unknown): TournamentValidationRes
     }
   }
 
-  return { valid: true, command: value as TournamentCommand };
+  return { valid: true, command: value as unknown as TournamentCommand };
 }

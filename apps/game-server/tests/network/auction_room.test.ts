@@ -160,6 +160,7 @@ describe('AuctionRoom Network Integration Tests (127.0.0.1)', () => {
     const room1 = await client1.create<any>('auction_26', {
       isSpectator: true,
       isPrivate: true,
+      password: 'test1234',
       ranked: false,
       allowSpectators: true,
       nickname: 'Creator'
@@ -176,6 +177,7 @@ describe('AuctionRoom Network Integration Tests (127.0.0.1)', () => {
       const room2 = await client2.joinById<any>(room1.roomId, {
         isSpectator: true,
         isPrivate: false,
+        password: 'test1234',
         ranked: true,
         nickname: 'Joiner'
       });

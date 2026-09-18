@@ -223,6 +223,7 @@ export type ErrorCode =
   | 'RATE_LIMITED'
   | 'UNAUTHORIZED'
   | 'ROOM_FULL'
+  | 'FEATURE_DISABLED'
   | 'INTERNAL_ERROR';
 
 export interface PublicError {

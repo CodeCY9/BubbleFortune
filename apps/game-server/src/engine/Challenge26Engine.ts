@@ -36,7 +36,13 @@ const CHALLENGE_AMOUNT_POOLS: Record<string, readonly number[]> = {
   ]
 };
 
-type ChallengeCommand = ClientCommand & { type?: string };
+type ChallengeCommand = (ClientCommand | Record<string, any>) & {
+  type?: string;
+  gameId?: string;
+  stateVersion?: number;
+  commandSequence?: number;
+  idempotencyKey?: string;
+};
 
 /** Challenge mode wraps the Classic authority with its versioned rule set. */
 export class Challenge26Engine {

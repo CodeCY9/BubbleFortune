@@ -24,7 +24,7 @@ export function StandalonePanelPage({ panel }: { panel: StandalonePanel }) {
   }, []);
 
   const titleMap: Record<StandalonePanel, string> = {
-    history: translate('history.title', language) || '对局历史',
+    history: translate('history.title.list', language) || '对局历史',
     ranking: translate('ranking.title', language) || '天梯排行榜',
     profile: translate('profile.title', language) || '个人档案',
   };

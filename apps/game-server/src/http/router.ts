@@ -395,7 +395,7 @@ export function createHttpHandler(options: RouterOptions) {
           return true;
         }
         sendJson(res, 200, {
-          resultId: record.resultId,
+          resultId,
           gameId: record.gameId,
           ruleVersion: record.ruleVersion,
           completedAt: record.completedAt,

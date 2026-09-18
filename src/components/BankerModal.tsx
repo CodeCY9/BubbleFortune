@@ -277,7 +277,7 @@ export const BankerModal: React.FC<BankerModalProps> = ({
           >
             <img
               src={profile.avatar}
-              alt={profile.name}
+              alt={localizedProfile.name}
               style={{
                 width: '100%',
                 height: '100%',

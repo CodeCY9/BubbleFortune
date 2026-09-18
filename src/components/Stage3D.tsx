@@ -2,14 +2,14 @@ import React, { Suspense, useEffect, useRef, useState, useCallback, useMemo } fr
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Html, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
-import { RoomEnvironment } from 'three-stdlib';
+import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import { BoxData, GamePhase, formatMoney } from '../types/game';
 import { Box3D, ASSETS } from './Box3D';
 import { StageEnvironment } from './StageEnvironment';
 import layouts from '../stage-layout.json';
 import { globalPerformanceSampler, WebGLStats } from '../utils/performance';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
-import { useTheme } from '../themes';
+import { useTheme, type ThemeDefinition } from '../themes';
 import { getLanguage, translate, useLanguage, type TranslationKey } from '../i18n';
 
 // Preload 3D models into memory cache so stage mounts instantly
@@ -220,7 +220,7 @@ function StudioEnvironment({ intensity = 1.35 }: { intensity?: number }) {
       scene.environment = null;
       renderTarget.dispose();
       pmremGenerator.dispose();
-      room.traverse((child) => {
+      room.traverse((child: any) => {
         if ((child as any).geometry) (child as any).geometry.dispose();
         if ((child as any).material) (child as any).material.dispose();
       });
@@ -240,7 +240,7 @@ function StageLighting({
   isLowQuality,
   isMobileLayout,
 }: {
-  themeDefinition: { tokens: Record<string, string> };
+  themeDefinition: ThemeDefinition;
   isLowQuality: boolean;
   isMobileLayout: boolean;
 }) {

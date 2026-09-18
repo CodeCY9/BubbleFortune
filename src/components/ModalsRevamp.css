@@ -1,0 +1,383 @@
+/* ==========================================================================
+   Modals Revamp: Desktop & Responsive Enhancements for Core Panels
+   (RankingModal, ProfileSummaryModal, HistoryModal, SettingsDialog)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Shared Dialog Overrides & Desktop Breakpoint
+   -------------------------------------------------------------------------- */
+.ranking-native-dialog,
+.profile-native-dialog,
+.history-native-dialog,
+.settings-native-dialog {
+  margin: auto;
+  border: none;
+  background: transparent;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(139, 92, 246, 0.25);
+  z-index: 125;
+}
+
+.ranking-native-dialog::backdrop,
+.profile-native-dialog::backdrop,
+.history-native-dialog::backdrop,
+.settings-native-dialog::backdrop {
+  background: rgba(7, 9, 15, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Base Dialog Content Box */
+.ranking-dialog-content,
+.profile-dialog-content,
+.history-dialog-content,
+.settings-dialog-content {
+  background: var(--bg-panel, rgba(14, 18, 35, 0.98));
+  border: 1.5px solid var(--border-gold, rgba(245, 158, 11, 0.45));
+  border-radius: 20px;
+  padding: clamp(16px, 2.8vw, 24px);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: var(--text-primary, #ffffff);
+}
+
+/* Desktop sizing expansions */
+@media (min-width: 768px) {
+  .ranking-native-dialog {
+    max-width: 1040px !important;
+    width: min(94vw, 1040px) !important;
+    max-height: 88vh !important;
+  }
+  .ranking-dialog-content {
+    max-height: 88vh !important;
+    height: 88vh;
+  }
+
+  .profile-native-dialog {
+    max-width: 880px !important;
+    width: min(94vw, 880px) !important;
+    max-height: 88vh !important;
+  }
+  .profile-dialog-content {
+    max-height: 88vh !important;
+  }
+
+  .history-native-dialog {
+    max-width: 1060px !important;
+    width: min(94vw, 1060px) !important;
+    max-height: 88vh !important;
+  }
+
+  .settings-native-dialog {
+    max-width: 860px !important;
+    width: min(94vw, 860px) !important;
+    max-height: 88vh !important;
+  }
+  .settings-dialog-content {
+    max-height: 88vh !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Ranking Modal: Pill Tabs & Podium Styling
+   -------------------------------------------------------------------------- */
+.ranking-board-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-top: 10px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.ranking-board-tabs-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.ranking-board-tabs-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+.ranking-board-pill {
+  white-space: nowrap;
+  padding: 6px 13px;
+  border-radius: 18px;
+  border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.12));
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary, #9ca3af);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 34px;
+}
+
+.ranking-board-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.ranking-board-pill.active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.28) 0%, rgba(245, 158, 11, 0.1) 100%);
+  border-color: var(--gold-primary, #f59e0b);
+  color: var(--gold-light, #fcd34d);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+}
+
+/* Podium Row Highlighting */
+.ranking-table tr.row-top-1 td {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0.04) 100%) !important;
+  border-top: 1px solid rgba(245, 158, 11, 0.3);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.ranking-table tr.row-top-1 td:first-child {
+  border-left: 3px solid var(--gold-primary, #f59e0b);
+}
+
+.ranking-table tr.row-top-2 td {
+  background: linear-gradient(90deg, rgba(226, 232, 240, 0.12) 0%, rgba(226, 232, 240, 0.03) 100%) !important;
+  border-top: 1px solid rgba(226, 232, 240, 0.25);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.25);
+}
+
+.ranking-table tr.row-top-2 td:first-child {
+  border-left: 3px solid #cbd5e1;
+}
+
+.ranking-table tr.row-top-3 td {
+  background: linear-gradient(90deg, rgba(251, 146, 60, 0.12) 0%, rgba(251, 146, 60, 0.03) 100%) !important;
+  border-top: 1px solid rgba(251, 146, 60, 0.25);
+  border-bottom: 1px solid rgba(251, 146, 60, 0.25);
+}
+
+.ranking-table tr.row-top-3 td:first-child {
+  border-left: 3px solid #fb923c;
+}
+
+/* --------------------------------------------------------------------------
+   3. Profile Summary Modal: Dashboard Matrix
+   -------------------------------------------------------------------------- */
+.profile-hero-bar {
+  background: linear-gradient(135deg, rgba(30, 27, 75, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.12));
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.profile-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .profile-kpi-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.profile-kpi-box {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.1));
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.profile-kpi-box:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-kpi-box.highlight {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0.03) 100%);
+  border-color: var(--border-gold, rgba(245, 158, 11, 0.4));
+}
+
+.profile-modes-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (min-width: 580px) {
+  .profile-modes-matrix {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .profile-modes-matrix {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.mode-stat-tile {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.09));
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  transition: background 0.18s ease;
+}
+
+.mode-stat-tile:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.mode-stat-tile .tile-num {
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-family: var(--font-mono, monospace);
+  color: #ffffff;
+}
+
+.mode-stat-tile .tile-name {
+  font-size: 0.72rem;
+  color: var(--text-secondary, #9ca3af);
+  line-height: 1.25;
+}
+
+/* --------------------------------------------------------------------------
+   4. History Modal: Dual-Column Detail & Mode Tabs
+   -------------------------------------------------------------------------- */
+.history-native-dialog {
+  border: 1.5px solid rgba(139, 92, 246, 0.45);
+  color: #ffffff;
+}
+
+.history-dialog-content {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+}
+
+.history-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.35);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.history-nav-tabs {
+  display: flex;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.08));
+}
+
+.history-nav-tab-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.history-nav-tab-btn:hover {
+  color: #ffffff;
+}
+
+.history-nav-tab-btn.active {
+  background: rgba(139, 92, 246, 0.28);
+  color: #c084fc;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.25);
+}
+
+/* Split-pane detail view for desktop */
+.history-detail-split {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 820px) {
+  .history-detail-split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 18px;
+  }
+}
+
+.history-detail-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.1));
+  border-radius: 14px;
+  padding: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Settings Dialog: 4-Group Grid & Touch Friendly
+   -------------------------------------------------------------------------- */
+.settings-group {
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.09));
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+
+.settings-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--gold-light, #fcd34d);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.01em;
+}
+
+.settings-group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 720px) {
+  .settings-group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .settings-group-grid.single-col {
+    grid-template-columns: 1fr;
+  }
+}

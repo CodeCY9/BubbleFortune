@@ -1,0 +1,27 @@
+{
+  "collection": "MODEL",
+  "required_objects": [
+    "BF_Chest_Root",
+    "BF_Chest_Base",
+    "BF_Chest_Body",
+    "BF_Chest_Trim",
+    "BF_Chest_Corners",
+    "BF_Chest_Interior",
+    "BF_Chest_LatchPivot",
+    "BF_Chest_Latch",
+    "BF_Chest_NumberPlate",
+    "BF_Chest_LidPivot",
+    "BF_Chest_Lid",
+    "BF_Chest_HingeBar"
+  ],
+  "required_actions": [],
+  "max_triangles": 30000,
+  "max_materials": 0,
+  "max_texture_size": 2048,
+  "require_uv": true,
+  "require_material": false,
+  "allow_non_manifold": false,
+  "scale_tolerance": 0.001,
+  "name_pattern": "^[A-Za-z0-9_]+$",
+  "pivot_rules": []
+}

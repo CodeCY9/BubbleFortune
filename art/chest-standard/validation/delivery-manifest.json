@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-08T05:55:08.568Z",
+  "files": [
+    {
+      "path": "art/chest-standard/source/briefcase_v008_animation.blend",
+      "bytes": 217134,
+      "sha256": "92f67843d98ee06b0aab33ec47ba51f0bd5ac7c819623149e5da5101599dd134"
+    },
+    {
+      "path": "art/chest-standard/source/briefcase_v008_low.blend",
+      "bytes": 214224,
+      "sha256": "21e093ec80adccc59d092ee960ad74db5b010a9d5f626006e16196435f0b6958"
+    },
+    {
+      "path": "art/stage-basic/source/display_stage_16_v006.blend",
+      "bytes": 400214,
+      "sha256": "9c85ac336aa12e180990646526b4d087555b3331da9a029b95685cd4607d3a81"
+    },
+    {
+      "path": "art/stage-basic/source/display_stage_26_v006.blend",
+      "bytes": 488757,
+      "sha256": "1655d8fd9d5e40d9caa676c502281a9715e50f2bca77d5e157806d4ab7ecf087"
+    },
+    {
+      "path": "public/assets/models/runtime/BF_Briefcase_v008.glb",
+      "bytes": 683368,
+      "sha256": "dafa0f3e2c5a5a9e3a7e10e85abd23f7977e28fe2a6fe07b3fbb0d9a36b783a1"
+    },
+    {
+      "path": "public/assets/models/runtime/BF_Briefcase_v008_low.glb",
+      "bytes": 448500,
+      "sha256": "a277ab387c3a9e84a84ef85f2d4a4cb7ce89db53a3dcf9c9a362eaa430267603"
+    },
+    {
+      "path": "public/assets/models/runtime/BF_DisplayStage_16_v006.glb",
+      "bytes": 834396,
+      "sha256": "27348ce3a4014d35d0a9fc928b3a7c8358b1fb2a8d2a7eb97d96e445a7d57fa5"
+    },
+    {
+      "path": "public/assets/models/runtime/BF_DisplayStage_26_v006.glb",
+      "bytes": 1099840,
+      "sha256": "2ae2bbf9c8cf3fd452c67f6595f4054abb1b40965c72ab1c6d74e1e8851bfc74"
+    },
+    {
+      "path": "src/stage-layout.json",
+      "bytes": 9192,
+      "sha256": "6dfb7df4f67b5395d5b6ecb6d0cdd1650d36c679694726374dfb3e1e3e80e7b6"
+    }
+  ]
+}

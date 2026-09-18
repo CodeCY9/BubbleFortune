@@ -1,0 +1,146 @@
+{
+  "date": "2026-09-10T11:28:48.907Z",
+  "entries": [
+    {
+      "original": "public/assets/models/chest_blue.glb",
+      "destination": "art/chest-standard/legacy/runtime/chest_blue.glb",
+      "bytes": 8060,
+      "sha256": "2e7912d6e3e4fd097ce298031273d4add285ae6693f0812ed5851be730f9b5a2",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/chest_blue.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_Briefcase_v008.glb",
+      "destination": "art/chest-standard/legacy/runtime/BF_Briefcase_v008.glb",
+      "bytes": 683368,
+      "sha256": "dafa0f3e2c5a5a9e3a7e10e85abd23f7977e28fe2a6fe07b3fbb0d9a36b783a1",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_Briefcase_v008.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_Briefcase_v008_low.glb",
+      "destination": "art/chest-standard/legacy/runtime/BF_Briefcase_v008_low.glb",
+      "bytes": 448500,
+      "sha256": "a277ab387c3a9e84a84ef85f2d4a4cb7ce89db53a3dcf9c9a362eaa430267603",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_Briefcase_v008_low.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_Chest_lod0.glb",
+      "destination": "art/chest-standard/legacy/runtime/BF_Chest_lod0.glb",
+      "bytes": 216100,
+      "sha256": "e3f14e996f0523909634104b74af5d4a036ff5a21c1ccb232ec58c590147a284",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_Chest_lod0.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_Chest_lod0_nla_test.glb",
+      "destination": "art/chest-standard/legacy/runtime/BF_Chest_lod0_nla_test.glb",
+      "bytes": 28236,
+      "sha256": "7548039cfe27a4c4aba51903ac9ade18670359f4d122de52fbdca6cde0bdd3ad",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_Chest_lod0_nla_test.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_Chest_lod1.glb",
+      "destination": "art/chest-standard/legacy/runtime/BF_Chest_lod1.glb",
+      "bytes": 109824,
+      "sha256": "9e2e7df9bdb5b6be56021feba89bfe792e74b2b85acac4cfaefe955bac906b43",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_Chest_lod1.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_Chest_lod2.glb",
+      "destination": "art/chest-standard/legacy/runtime/BF_Chest_lod2.glb",
+      "bytes": 47044,
+      "sha256": "32af81bad23fdf52d379d402e85b9e91329a802d02c5d1cfb9959af7ae49ed0f",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_Chest_lod2.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/clips/Chest_Hover.glb",
+      "destination": "art/chest-standard/legacy/runtime/clips/Chest_Hover.glb",
+      "bytes": 209388,
+      "sha256": "23bb476cee1e5407646a790cdd1c37bf1a326bfe9010828302adef4a8367ef50",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/clips/Chest_Hover.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/clips/Chest_Idle.glb",
+      "destination": "art/chest-standard/legacy/runtime/clips/Chest_Idle.glb",
+      "bytes": 209512,
+      "sha256": "bc7202d30c6573ddb67466b3673ee32f79dd9bc980629a17fd003deb0251f951",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/clips/Chest_Idle.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/clips/Chest_Open.glb",
+      "destination": "art/chest-standard/legacy/runtime/clips/Chest_Open.glb",
+      "bytes": 210748,
+      "sha256": "0b4d9b48f160ebd6eab5e49d183bd6f1a21beb4ae8912c9966b42ec6ea8ca177",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/clips/Chest_Open.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/clips/Chest_RewardHold.glb",
+      "destination": "art/chest-standard/legacy/runtime/clips/Chest_RewardHold.glb",
+      "bytes": 210868,
+      "sha256": "fab61b83484126ee15b7c1abe36a454b0c4ed5105753263cdd0a985c77850883",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/clips/Chest_RewardHold.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/clips/Chest_Selected.glb",
+      "destination": "art/chest-standard/legacy/runtime/clips/Chest_Selected.glb",
+      "bytes": 209208,
+      "sha256": "3c5236b74936b155a5300359053fb5f4d2859a5d645480dcf7b178f86f4b3182",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/clips/Chest_Selected.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/clips/Chest_Shake.glb",
+      "destination": "art/chest-standard/legacy/runtime/clips/Chest_Shake.glb",
+      "bytes": 209152,
+      "sha256": "bb3cb06b626e5037e15db6c4e72b7b344959dcf51d9db92d2835ef664d8c787c",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/clips/Chest_Shake.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_DisplayStage_16_v007.glb",
+      "destination": "art/stage-basic/legacy/runtime/BF_DisplayStage_16_v007.glb",
+      "bytes": 1442972,
+      "sha256": "9adc4d3ecc7bf0955f7bc2eb079fea48f46f67fcf56a86a5eece9d28a2ae76cc",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_DisplayStage_16_v007.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_DisplayStage_16_v006.glb",
+      "destination": "art/stage-basic/legacy/runtime/BF_DisplayStage_16_v006.glb",
+      "bytes": 834396,
+      "sha256": "27348ce3a4014d35d0a9fc928b3a7c8358b1fb2a8d2a7eb97d96e445a7d57fa5",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_DisplayStage_16_v006.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_DisplayStage_26_v006.glb",
+      "destination": "art/stage-basic/legacy/runtime/BF_DisplayStage_26_v006.glb",
+      "bytes": 1099840,
+      "sha256": "2ae2bbf9c8cf3fd452c67f6595f4054abb1b40965c72ab1c6d74e1e8851bfc74",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_DisplayStage_26_v006.glb"
+    },
+    {
+      "original": "public/assets/models/runtime/BF_Stage.glb",
+      "destination": "art/stage-basic/legacy/runtime/BF_Stage.glb",
+      "bytes": 1133944,
+      "sha256": "2d6c62ef573cb6de6f0165ff7ebf4f5f5d2c67f94f3dba2afe63c79112b4a0a3",
+      "backup": ".codex-antigravity/backups/runtime-archive/public/assets/models/runtime/BF_Stage.glb"
+    }
+  ],
+  "current": [
+    {
+      "path": "public/assets/models/runtime/BF_Briefcase_v009.glb",
+      "bytes": 2041564,
+      "sha256": "c4d378cea0bc52bd309e65384596bc3c1e11a53d3d737a033fc12ef427b0c6b4"
+    },
+    {
+      "path": "public/assets/models/runtime/BF_Briefcase_v009_low.glb",
+      "bytes": 1608184,
+      "sha256": "af6cab7b47c4023a9525ca9ecbc6f415a6c9d33d2dd8ea023c8bfc258825cf20"
+    },
+    {
+      "path": "public/assets/models/runtime/BF_DisplayStage_26_v007.glb",
+      "bytes": 1917800,
+      "sha256": "2e3e198ac1218eedf3de8256196fbc887e5ad9ce708818b636deb9a579aad592"
+    }
+  ],
+  "layout": {
+    "archive": "art/stage-basic/legacy/stage-layout-16.json",
+    "backup": ".codex-antigravity/backups/runtime-archive/stage-layout.json",
+    "current26Unchanged": true
+  }
+}

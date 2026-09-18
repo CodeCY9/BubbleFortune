@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs><linearGradient id="gold" x2=".5" y2="1"><stop stop-color="#ffe6a6"/><stop offset=".55" stop-color="#d9ac53"/><stop offset="1" stop-color="#a87729"/></linearGradient>
+    <radialGradient id="velvet" cy=".25"><stop stop-color="#593b71"/><stop offset="1" stop-color="#201331"/></radialGradient></defs>
+  <rect width="512" height="512" fill="url(#velvet)"/>
+  <circle cx="256" cy="256" r="211" fill="none" stroke="#ad8250" stroke-width="2"/>
+  <path d="M202 194v-27q0-20 20-20h68q20 0 20 20v27" fill="none" stroke="url(#gold)" stroke-width="18"/>
+  <rect x="113" y="194" width="286" height="184" rx="24" fill="url(#gold)"/>
+  <rect x="129" y="210" width="254" height="151" rx="13" fill="#342041" stroke="#ffdf94" stroke-width="3"/>
+  <path d="M131 265h250M166 211v149M346 211v149" stroke="#c79543" stroke-width="9"/>
+  <rect x="231" y="248" width="50" height="42" rx="8" fill="url(#gold)"/>
+  <path d="M256 258v17" stroke="#553226" stroke-width="7" stroke-linecap="round"/>
+  <path d="m367 128 5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#ffe2a4"/>
+</svg>

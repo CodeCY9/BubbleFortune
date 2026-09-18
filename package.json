@@ -1,0 +1,53 @@
+{
+  "name": "bubble-fortune",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:all": "node scripts/dev-all.mjs",
+    "dev:web": "vite",
+    "dev:server": "tsx apps/game-server/src/index.ts",
+    "build": "tsc && vite build && node scripts/build-pwa.mjs",
+    "check:server": "tsc --noEmit -p tsconfig.server.json",
+    "typecheck:server": "tsc --noEmit -p tsconfig.server.json",
+    "test:server": "tsx --test apps/game-server/tests/unit/**/*.test.ts apps/game-server/tests/network/**/*.test.ts",
+    "test:database": "node --env-file-if-exists=.env.local --import tsx --test apps/game-server/tests/database/**/*.test.ts",
+    "test:unit": "tsx --test apps/game-server/tests/unit/**/*.test.ts",
+    "test:integration": "tsx --test apps/game-server/tests/network/**/*.test.ts",
+    "test:presentation": "tsx --test scripts/check-presentation.test.ts scripts/check-client.test.ts",
+    "test:web": "tsx --test scripts/check-preferences.test.ts scripts/check-production-helper.test.ts scripts/check-v02-regressions.test.ts scripts/check-presentation.test.ts scripts/check-client.test.ts",
+    "test:pwa": "tsx --test scripts/check-pwa.test.ts",
+    "db:setup": "node scripts/database.mjs setup",
+    "db:up": "node scripts/database.mjs up",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@colyseus/core": "^0.16.26",
+    "@colyseus/ws-transport": "^0.16.5",
+    "@react-three/drei": "^9.120.4",
+    "@react-three/fiber": "^8.17.10",
+    "blender-mcp": "^1.0.1",
+    "canvas-confetti": "^1.9.4",
+    "colyseus.js": "^0.16.22",
+    "lucide-react": "^0.475.0",
+    "pg": "^8.23.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.170.0",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^26.5.0",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/three": "^0.170.0",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tsx": "^4.23.13",
+    "typescript": "^5.6.3",
+    "vite": "^6.1.0"
+  }
+}

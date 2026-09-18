@@ -1,0 +1,180 @@
+/* AppShell.css - 通用桌面端框架与深度链接页面容器样式 */
+
+.app-shell-viewport {
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  background: radial-gradient(circle at 50% -10%, #171836 0%, #0c0d1e 50%, #05060b 100%);
+  color: var(--text-primary, #ffffff);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 微金质感滚动条 */
+.app-shell-viewport::-webkit-scrollbar {
+  width: 8px;
+}
+.app-shell-viewport::-webkit-scrollbar-track {
+  background: rgba(11, 12, 30, 0.6);
+}
+.app-shell-viewport::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.35);
+  border-radius: 4px;
+}
+.app-shell-viewport::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.6);
+}
+
+/* 顶部通用导航栏 (Universal Topbar) */
+.app-shell-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(14, 16, 35, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.app-shell-topbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.app-shell-brand-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-shell-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff 30%, #fcd34d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.2s ease;
+}
+
+.app-shell-logo-link:hover {
+  opacity: 0.9;
+}
+
+.app-shell-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #9ca3af);
+  font-weight: 600;
+}
+
+.app-shell-breadcrumb-link {
+  color: #c4b5fd;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.app-shell-breadcrumb-link:hover {
+  color: #fcd34d;
+  text-decoration: underline;
+}
+
+.app-shell-breadcrumb-current {
+  color: #fcd34d;
+  font-weight: 700;
+}
+
+/* 顶栏右侧操作区 */
+.app-shell-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-shell-back-btn {
+  min-height: 38px;
+  padding: 6px 16px;
+  border-radius: 10px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fcd34d;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-shell-back-btn:hover {
+  background: rgba(245, 158, 11, 0.28);
+  border-color: rgba(245, 158, 11, 0.65);
+  transform: translateX(-2px);
+}
+
+.app-shell-key-badge {
+  font-size: 0.7rem;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+}
+
+/* 内容主体容器 */
+.app-shell-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 独立仪表盘面板卡片容器 (Standalone Dashboard Container) */
+.standalone-dashboard-card {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  background: rgba(14, 16, 35, 0.75);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 24px rgba(245, 158, 11, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 响应式调整 */
+@media (max-width: 767px) {
+  .app-shell-topbar-inner {
+    padding: 10px 14px;
+  }
+  .app-shell-main {
+    padding: 14px 12px 32px;
+  }
+  .app-shell-breadcrumb {
+    display: none;
+  }
+}

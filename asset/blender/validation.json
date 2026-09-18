@@ -1,0 +1,643 @@
+{
+  "status": "PASS",
+  "blender_version": "5.2.0 LTS",
+  "blend_file": "D:\\CRepository\\BubbleFortune\\asset\\blender\\stage_v005_animation.blend",
+  "collection": "EXPORT",
+  "summary": {
+    "objects": 45,
+    "mesh_objects": 37,
+    "triangles": 25102,
+    "materials": 3,
+    "textures": 0,
+    "actions": 2,
+    "errors": 0,
+    "warnings": 0
+  },
+  "mesh_stats": [
+    {
+      "name": "STAGE_Platform_Base",
+      "triangles": 764,
+      "vertices": 384,
+      "polygons": 444,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        8.0,
+        8.0,
+        0.3
+      ]
+    },
+    {
+      "name": "STAGE_Platform_Top",
+      "triangles": 764,
+      "vertices": 384,
+      "polygons": 444,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        6.0,
+        6.0,
+        0.25
+      ]
+    },
+    {
+      "name": "STAGE_Platform_Ring_Mid",
+      "triangles": 1024,
+      "vertices": 512,
+      "polygons": 512,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        7.05,
+        7.05,
+        0.05
+      ]
+    },
+    {
+      "name": "STAGE_Platform_Ring_Outer",
+      "triangles": 1024,
+      "vertices": 512,
+      "polygons": 512,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        7.94,
+        7.94,
+        0.04
+      ]
+    },
+    {
+      "name": "STAGE_Platform_Ring_Inner",
+      "triangles": 1024,
+      "vertices": 512,
+      "polygons": 512,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        4.43,
+        4.43,
+        0.03
+      ]
+    },
+    {
+      "name": "STAGE_BackWall",
+      "triangles": 1236,
+      "vertices": 620,
+      "polygons": 618,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        12.822065,
+        5.410357,
+        3.55
+      ]
+    },
+    {
+      "name": "STAGE_BackWall_TopTrim",
+      "triangles": 796,
+      "vertices": 400,
+      "polygons": 402,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        12.869415,
+        5.442963,
+        0.1
+      ]
+    },
+    {
+      "name": "STAGE_LightPillar_L3",
+      "triangles": 220,
+      "vertices": 112,
+      "polygons": 116,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.497805,
+        0.57101,
+        5.5
+      ]
+    },
+    {
+      "name": "STAGE_LightPillar_L2",
+      "triangles": 212,
+      "vertices": 108,
+      "polygons": 114,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.458817,
+        0.421981,
+        4.5
+      ]
+    },
+    {
+      "name": "STAGE_LightPillar_L1",
+      "triangles": 212,
+      "vertices": 108,
+      "polygons": 114,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.326004,
+        0.244888,
+        4.0
+      ]
+    },
+    {
+      "name": "STAGE_LightPillar_R1",
+      "triangles": 212,
+      "vertices": 108,
+      "polygons": 114,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.326004,
+        0.244888,
+        4.0
+      ]
+    },
+    {
+      "name": "STAGE_LightPillar_R2",
+      "triangles": 212,
+      "vertices": 108,
+      "polygons": 114,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.458817,
+        0.421981,
+        4.5
+      ]
+    },
+    {
+      "name": "STAGE_LightPillar_R3",
+      "triangles": 220,
+      "vertices": 112,
+      "polygons": 116,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.497805,
+        0.57101,
+        5.5
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Bar_Front",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        6.0,
+        0.06,
+        0.06
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Bar_Rear",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        6.0,
+        0.06,
+        0.06
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Bar_Left",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.06,
+        2.25,
+        0.06
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Bar_Right",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.06,
+        2.25,
+        0.06
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Bar_Center",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        6.0,
+        0.06,
+        0.06
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Leg_LF",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.06,
+        0.06,
+        2.75
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Leg_LR",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.06,
+        0.06,
+        2.75
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Leg_RF",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.06,
+        0.06,
+        2.75
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Leg_RR",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.06,
+        0.06,
+        2.75
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Brace_F1",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        3.006757,
+        0.03,
+        2.7586
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Brace_F2",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        3.006757,
+        0.03,
+        2.7586
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Brace_R1",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        3.006757,
+        0.03,
+        2.7586
+      ]
+    },
+    {
+      "name": "STAGE_Truss_Brace_R2",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 26,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        3.006757,
+        0.03,
+        2.7586
+      ]
+    },
+    {
+      "name": "STAGE_Seating_Tier1",
+      "triangles": 668,
+      "vertices": 336,
+      "polygons": 338,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        14.6,
+        8.564159,
+        0.6
+      ]
+    },
+    {
+      "name": "STAGE_SeatBack_Tier1",
+      "triangles": 668,
+      "vertices": 336,
+      "polygons": 338,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        14.6,
+        8.565895,
+        0.8
+      ]
+    },
+    {
+      "name": "STAGE_Seating_Tier2",
+      "triangles": 668,
+      "vertices": 336,
+      "polygons": 338,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        18.200001,
+        10.676725,
+        0.6
+      ]
+    },
+    {
+      "name": "STAGE_SeatBack_Tier2",
+      "triangles": 668,
+      "vertices": 336,
+      "polygons": 338,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        18.200001,
+        10.678462,
+        0.8
+      ]
+    },
+    {
+      "name": "STAGE_Seating_Tier3",
+      "triangles": 668,
+      "vertices": 336,
+      "polygons": 338,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        21.799999,
+        12.789291,
+        0.6
+      ]
+    },
+    {
+      "name": "STAGE_SeatBack_Tier3",
+      "triangles": 668,
+      "vertices": 336,
+      "polygons": 338,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        21.799999,
+        12.791028,
+        0.8
+      ]
+    },
+    {
+      "name": "STAGE_Seating_Tier4",
+      "triangles": 668,
+      "vertices": 336,
+      "polygons": 338,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        25.4,
+        14.901858,
+        0.6
+      ]
+    },
+    {
+      "name": "STAGE_SeatBack_Tier4",
+      "triangles": 668,
+      "vertices": 336,
+      "polygons": 338,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        25.4,
+        14.903595,
+        0.8
+      ]
+    },
+    {
+      "name": "STAGE_Floor",
+      "triangles": 508,
+      "vertices": 256,
+      "polygons": 316,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        28.0,
+        28.0,
+        0.08
+      ]
+    },
+    {
+      "name": "STAGE_LOD1",
+      "triangles": 7172,
+      "vertices": 3650,
+      "polygons": 7172,
+      "uv_layers": 2,
+      "materials": [
+        "Stage_Body",
+        "Stage_Trim",
+        "Stage_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        28.0,
+        28.0,
+        11.106154
+      ]
+    },
+    {
+      "name": "STAGE_LOD2",
+      "triangles": 3586,
+      "vertices": 1857,
+      "polygons": 3586,
+      "uv_layers": 2,
+      "materials": [
+        "Stage_Body",
+        "Stage_Trim",
+        "Stage_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        27.991619,
+        27.991619,
+        11.110786
+      ]
+    }
+  ],
+  "materials": [
+    "Stage_Body",
+    "Stage_Emissive",
+    "Stage_Trim"
+  ],
+  "textures": [],
+  "actions": [
+    "StageIdle",
+    "StageReveal"
+  ],
+  "errors": [],
+  "warnings": [],
+  "config": {
+    "collection": "EXPORT",
+    "required_objects": [],
+    "required_actions": [
+      "StageReveal",
+      "StageIdle"
+    ],
+    "max_triangles": 30000,
+    "max_materials": 3,
+    "max_texture_size": 2048,
+    "require_uv": true,
+    "require_material": true,
+    "allow_non_manifold": false,
+    "scale_tolerance": 0.001,
+    "name_pattern": "^[A-Za-z0-9_]+$",
+    "pivot_rules": []
+  }
+}

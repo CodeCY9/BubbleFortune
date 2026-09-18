@@ -1,0 +1,107 @@
+- banner:
+  - heading "BubbleFortune" [level=1]
+  - button "开启声音":
+- generic: 第 1 轮 · 还需开出 4 个箱子
+- button "1 号箱，我的箱子" [disabled]:
+  - generic: "1"
+  - generic: 我的箱子
+- button "2 号箱":
+  - generic: "2"
+- button "3 号箱":
+  - generic: "3"
+- button "4 号箱":
+  - generic: "4"
+- button "5 号箱":
+  - generic: "5"
+- button "6 号箱":
+  - generic: "6"
+- button "7 号箱":
+  - generic: "7"
+- button "8 号箱":
+  - generic: "8"
+- button "9 号箱":
+  - generic: "9"
+- button "10 号箱":
+  - generic: "10"
+- button "11 号箱":
+  - generic: "11"
+- button "12 号箱":
+  - generic: "12"
+- button "13 号箱":
+  - generic: "13"
+- button "14 号箱":
+  - generic: "14"
+- button "15 号箱":
+  - generic: "15"
+- button "16 号箱":
+  - generic: "16"
+- button "17 号箱":
+  - generic: "17"
+- button "18 号箱":
+  - generic: "18"
+- button "19 号箱":
+  - generic: "19"
+- button "20 号箱":
+  - generic: "20"
+- button "21 号箱":
+  - generic: "21"
+- button "22 号箱":
+  - generic: "22"
+- generic "24 号箱，10,000 分":
+  - text: 10,000
+  - generic: 分
+- button "25 号箱":
+  - generic: "25"
+- button "26 号箱":
+  - generic: "26"
+- generic "23 号箱，5,000 分":
+  - text: 5,000
+  - generic: 分
+- combobox "选择箱号或查看已开金额":
+  - option "选择箱号 / 查看金额" [selected]
+  - option "1 号 · 我的箱子"
+  - option "2 号"
+  - option "3 号"
+  - option "4 号"
+  - option "5 号"
+  - option "6 号"
+  - option "7 号"
+  - option "8 号"
+  - option "9 号"
+  - option "10 号"
+  - option "11 号"
+  - option "12 号"
+  - option "13 号"
+  - option "14 号"
+  - option "15 号"
+  - option "16 号"
+  - option "17 号"
+  - option "18 号"
+  - option "19 号"
+  - option "20 号"
+  - option "21 号"
+  - option "22 号"
+  - option "23 号 · 5,000 分"
+  - option "24 号 · 10,000 分"
+  - option "25 号"
+  - option "26 号"
+- button "打开箱子" [disabled]
+- button "低金额池 (13个)"
+- button "高金额池 (13个)"
+- generic: 高额区
+- generic: $5,000
+- generic: $10,000
+- generic: $25,000
+- generic: $50,000
+- generic: $75,000
+- generic: $100,000
+- generic: $200,000
+- generic: $300,000
+- generic: $400,000
+- generic: $500,000
+- generic: $750,000
+- generic: $1,000,000
+- generic: 本轮已开启
+- generic: 已开启 24 号箱 -> $10,000
+- generic: 已开启 23 号箱 -> $5,000
+- generic: 查看全部

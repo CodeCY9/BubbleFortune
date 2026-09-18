@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "blender_version": "5.2.0 LTS",
+  "blend_file": "D:\\CRepository\\BubbleFortune\\art\\stage-basic\\source\\display_stage_26_v006.blend",
+  "collection": "EXPORT",
+  "summary": {
+    "objects": 29,
+    "mesh_objects": 3,
+    "triangles": 23328,
+    "materials": 3,
+    "textures": 0,
+    "actions": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "mesh_stats": [
+    {
+      "name": "Stage_Indigo",
+      "triangles": 8208,
+      "vertices": 4116,
+      "polygons": 4104,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Indigo"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        28.0,
+        22.0,
+        8.25
+      ]
+    },
+    {
+      "name": "Stage_Champagne",
+      "triangles": 12312,
+      "vertices": 6244,
+      "polygons": 6156,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Champagne"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        24.505545,
+        11.92525,
+        7.88
+      ]
+    },
+    {
+      "name": "Stage_Porcelain",
+      "triangles": 2808,
+      "vertices": 1456,
+      "polygons": 1404,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Porcelain"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        14.213229,
+        14.130038,
+        5.47
+      ]
+    }
+  ],
+  "materials": [
+    "Stage_Champagne",
+    "Stage_Indigo",
+    "Stage_Porcelain"
+  ],
+  "textures": [],
+  "actions": [],
+  "errors": [],
+  "warnings": [],
+  "config": {
+    "collection": "EXPORT",
+    "required_objects": [],
+    "required_actions": [],
+    "max_triangles": 30000,
+    "max_materials": 3,
+    "max_texture_size": 2048,
+    "require_uv": true,
+    "require_material": true,
+    "allow_non_manifold": false,
+    "scale_tolerance": 0.001,
+    "name_pattern": "^[A-Za-z0-9_]+$",
+    "pivot_rules": []
+  }
+}

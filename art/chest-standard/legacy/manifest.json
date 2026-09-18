@@ -1,0 +1,192 @@
+{
+  "task": "ART-003",
+  "migration_date": "2026-09-10T17:45:00+08:00",
+  "description": "Migration of 22 legacy production non-runtime assets from public/assets/models to art/chest-standard/legacy. Runtime files and root chest_blue.glb remain in public/assets/models.",
+  "notes": "Historical JSON validation reports retain their original embedded paths (e.g. blend_file pointing to public/assets/models/...) to preserve authentic production audit evidence. This manifest maps original paths to their new locations and backup locations.",
+  "summary": {
+    "migrated_count": 22,
+    "blend_count": 6,
+    "validation_count": 4,
+    "preview_count": 12,
+    "runtime_count_preserved": 19,
+    "root_legacy_preserved": 1
+  },
+  "files": [
+    {
+      "original_path": "public/assets/models/BF_Chest_v001.blend",
+      "new_path": "art/chest-standard/legacy/source/BF_Chest_v001.blend",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/BF_Chest_v001.blend",
+      "bytes": 94494,
+      "sha256": "e37e6788e4fb3acbf064f0acb5760a053b5e193f5fa4a78006ceb0db203f6689",
+      "type": "blend"
+    },
+    {
+      "original_path": "public/assets/models/BF_Chest_v001_blockout.blend",
+      "new_path": "art/chest-standard/legacy/source/BF_Chest_v001_blockout.blend",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/BF_Chest_v001_blockout.blend",
+      "bytes": 103356,
+      "sha256": "de4aa806800da8a3474e325d9235cec5132ff88d852f82ef3dc27175652ea6b2",
+      "type": "blend"
+    },
+    {
+      "original_path": "public/assets/models/BF_Chest_v002_model.blend",
+      "new_path": "art/chest-standard/legacy/source/BF_Chest_v002_model.blend",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/BF_Chest_v002_model.blend",
+      "bytes": 102172,
+      "sha256": "ca6ef37ce4443dae9ad45728cfa0db1aaf90237afb6311af06d118c445fc834a",
+      "type": "blend"
+    },
+    {
+      "original_path": "public/assets/models/BF_Chest_v002_model_uv.blend",
+      "new_path": "art/chest-standard/legacy/source/BF_Chest_v002_model_uv.blend",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/BF_Chest_v002_model_uv.blend",
+      "bytes": 119480,
+      "sha256": "d85dfe5590432d4d4223b71ca3c5b825a23c5178ea00578649d90e57b2f21d16",
+      "type": "blend"
+    },
+    {
+      "original_path": "public/assets/models/BF_Chest_v003_material.blend",
+      "new_path": "art/chest-standard/legacy/source/BF_Chest_v003_material.blend",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/BF_Chest_v003_material.blend",
+      "bytes": 118417,
+      "sha256": "47a5973e61971f708b59e77696e7e02286eec976d013174203049d733a30698d",
+      "type": "blend"
+    },
+    {
+      "original_path": "public/assets/models/BF_Chest_v005_export.blend",
+      "new_path": "art/chest-standard/legacy/source/BF_Chest_v005_export.blend",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/BF_Chest_v005_export.blend",
+      "bytes": 150964,
+      "sha256": "12ff2a186fd0bbeb9bf0e25ae3767cfff05fc9da5833f12a929a24054ab7d47a",
+      "type": "blend"
+    },
+    {
+      "original_path": "public/assets/models/BF_Chest_gate4_validation.json",
+      "new_path": "art/chest-standard/legacy/validation/BF_Chest_gate4_validation.json",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/BF_Chest_gate4_validation.json",
+      "bytes": 8367,
+      "sha256": "71d471049e09a9dfa26cb3114ceafb1469ad2f9c2da26bb91e7171e661af8170",
+      "type": "validation"
+    },
+    {
+      "original_path": "public/assets/models/BF_Chest_gate4_validator_config.json",
+      "new_path": "art/chest-standard/legacy/validation/BF_Chest_gate4_validator_config.json",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/BF_Chest_gate4_validator_config.json",
+      "bytes": 606,
+      "sha256": "7d25f727886cc5b0bdd8bf88cca0f4f85133a24124380d957a07dca40cf14745",
+      "type": "validation"
+    },
+    {
+      "original_path": "public/assets/models/BF_Chest_validator_config.json",
+      "new_path": "art/chest-standard/legacy/validation/BF_Chest_validator_config.json",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/BF_Chest_validator_config.json",
+      "bytes": 1024,
+      "sha256": "3a8e68d77aab38bfd5bb791b72e53f2fe550ee63f781cd41ddf1c83a79da94c7",
+      "type": "validation"
+    },
+    {
+      "original_path": "public/assets/models/validation.json",
+      "new_path": "art/chest-standard/legacy/validation/validation.json",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/validation.json",
+      "bytes": 10026,
+      "sha256": "7fea543efd2234f701634f99a825e671d39da844795dfd7ad623ccad315a049a",
+      "type": "validation"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_blockout_front.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_blockout_front.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_blockout_front.png",
+      "bytes": 299695,
+      "sha256": "2aaa1ac8dcd451809e819bf9da4715b27752294eb1641ce7cf44f9db842016cf",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_blockout_front_3q.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_blockout_front_3q.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_blockout_front_3q.png",
+      "bytes": 370740,
+      "sha256": "7c0c59532865eb92bf12a547b44446530dc84f32ce2a119d73679dcbd9eb3bc9",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_blockout_rear.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_blockout_rear.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_blockout_rear.png",
+      "bytes": 289590,
+      "sha256": "fc2778e653cb28ebe28fc3cc04382daa8ef75de4f7e812d14892f7dc588154d1",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_blockout_side.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_blockout_side.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_blockout_side.png",
+      "bytes": 259056,
+      "sha256": "b591e2f342724256a9c9c13afae52b487290262de794d3229ca1f8ef91ae2e9a",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_final_front.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_final_front.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_final_front.png",
+      "bytes": 593987,
+      "sha256": "4e35306f9b723eb678ec08279a3dab570fdb1da6dbace744dad4c50a42ff5f2a",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_final_front_3q.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_final_front_3q.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_final_front_3q.png",
+      "bytes": 643126,
+      "sha256": "eacaa44e509ed9af5a253d9287fe410569cc4e198745c09c03acbb7abb6b30a4",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_final_rear.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_final_rear.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_final_rear.png",
+      "bytes": 562258,
+      "sha256": "53e563d985bac0948898b2b9eb632ea2c6e251afcb874a6a790ffa79b26aeecd",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_final_side.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_final_side.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_final_side.png",
+      "bytes": 565705,
+      "sha256": "96cf6b5ad84dc56d8ba4631183fb84eca820ddf3d6e285f6a3e57ec2b379a25a",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_model_front.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_model_front.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_model_front.png",
+      "bytes": 303860,
+      "sha256": "4eb4a223813d8141e3af14fd4d040d0d66870ad1b0e1532c863010bd1a949c0b",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_model_front_3q.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_model_front_3q.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_model_front_3q.png",
+      "bytes": 383064,
+      "sha256": "434ce6fd0f6af35d5bd5ec4df7d4f94b0bcd4778f77ed56b554b1a7e9d1f6379",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_model_rear.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_model_rear.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_model_rear.png",
+      "bytes": 302052,
+      "sha256": "6eeaa6ec964bc9590840c14668ca619971c7eb9109aed10ee273a24b034164d3",
+      "type": "preview"
+    },
+    {
+      "original_path": "public/assets/models/previews/BF_Chest_model_side.png",
+      "new_path": "art/chest-standard/legacy/previews/BF_Chest_model_side.png",
+      "backup_path": ".codex-antigravity/backups/public/assets/models/previews/BF_Chest_model_side.png",
+      "bytes": 266604,
+      "sha256": "617e53a9917da255f43509c53d6fc3a376276ed475d04070a66c9a7e4eac09eb",
+      "type": "preview"
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+{
+  "status": "PASS",
+  "blender_version": "5.2.0 LTS",
+  "blend_file": "D:\\CRepository\\BubbleFortune\\public\\assets\\models\\BF_Chest_v003_material.blend",
+  "collection": "EXPORT",
+  "summary": {
+    "objects": 40,
+    "mesh_objects": 26,
+    "triangles": 408,
+    "materials": 3,
+    "textures": 0,
+    "actions": 6,
+    "errors": 0,
+    "warnings": 0
+  },
+  "mesh_stats": [
+    {
+      "name": "BF_Chest_BodyFloor",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.3,
+        0.64,
+        0.06
+      ]
+    },
+    {
+      "name": "BF_Chest_BodyFront",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.3,
+        0.055,
+        0.48
+      ]
+    },
+    {
+      "name": "BF_Chest_BodyRear",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.3,
+        0.055,
+        0.48
+      ]
+    },
+    {
+      "name": "BF_Chest_BodySide_L",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.055,
+        0.65,
+        0.48
+      ]
+    },
+    {
+      "name": "BF_Chest_BodySide_R",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.055,
+        0.65,
+        0.48
+      ]
+    },
+    {
+      "name": "BF_Chest_Plinth",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.52,
+        0.8,
+        0.1
+      ]
+    },
+    {
+      "name": "BF_Chest_Interior",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.27,
+        0.61,
+        0.03
+      ]
+    },
+    {
+      "name": "BF_Chest_FrontRail_Top",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.36,
+        0.055,
+        0.075
+      ]
+    },
+    {
+      "name": "BF_Chest_FrontRail_Bottom",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.36,
+        0.055,
+        0.065
+      ]
+    },
+    {
+      "name": "BF_Chest_FrontTrim_L",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.075,
+        0.055,
+        0.39
+      ]
+    },
+    {
+      "name": "BF_Chest_FrontTrim_R",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.075,
+        0.055,
+        0.39
+      ]
+    },
+    {
+      "name": "BF_Chest_Corner_L_F",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.1,
+        0.1,
+        0.48
+      ]
+    },
+    {
+      "name": "BF_Chest_Corner_L_B",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.1,
+        0.1,
+        0.48
+      ]
+    },
+    {
+      "name": "BF_Chest_Corner_R_F",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.1,
+        0.1,
+        0.48
+      ]
+    },
+    {
+      "name": "BF_Chest_Corner_R_B",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.1,
+        0.1,
+        0.48
+      ]
+    },
+    {
+      "name": "BF_Chest_Latch",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Emissive"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.24,
+        0.055,
+        0.24
+      ]
+    },
+    {
+      "name": "BF_Chest_LidTop",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.44,
+        0.72,
+        0.06
+      ]
+    },
+    {
+      "name": "BF_Chest_LidFront",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.44,
+        0.055,
+        0.23
+      ]
+    },
+    {
+      "name": "BF_Chest_LidRear",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.44,
+        0.055,
+        0.23
+      ]
+    },
+    {
+      "name": "BF_Chest_LidSide_L",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.055,
+        0.765,
+        0.23
+      ]
+    },
+    {
+      "name": "BF_Chest_LidSide_R",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_Body"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.055,
+        0.765,
+        0.23
+      ]
+    },
+    {
+      "name": "BF_Chest_LidCorner_L",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.16,
+        0.13,
+        0.19
+      ]
+    },
+    {
+      "name": "BF_Chest_LidCorner_R",
+      "triangles": 12,
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.16,
+        0.13,
+        0.19
+      ]
+    },
+    {
+      "name": "BF_Chest_HingeBar",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 14,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.056,
+        0.056,
+        1.2
+      ]
+    },
+    {
+      "name": "BF_Chest_HingeCap_L",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 14,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.084,
+        0.084,
+        0.06
+      ]
+    },
+    {
+      "name": "BF_Chest_HingeCap_R",
+      "triangles": 44,
+      "vertices": 24,
+      "polygons": 14,
+      "uv_layers": 1,
+      "materials": [
+        "M_BF_Chest_GoldTrim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.084,
+        0.084,
+        0.06
+      ]
+    }
+  ],
+  "materials": [
+    "M_BF_Chest_Body",
+    "M_BF_Chest_Emissive",
+    "M_BF_Chest_GoldTrim"
+  ],
+  "textures": [],
+  "actions": [
+    "Chest_Hover",
+    "Chest_Idle",
+    "Chest_Open",
+    "Chest_RewardHold",
+    "Chest_Selected",
+    "Chest_Shake"
+  ],
+  "errors": [],
+  "warnings": [],
+  "config": {
+    "collection": "EXPORT",
+    "required_objects": [
+      "BF_Chest_Root",
+      "BF_Chest_Base",
+      "BF_Chest_Body",
+      "BF_Chest_Trim",
+      "BF_Chest_Corners",
+      "BF_Chest_Latch",
+      "BF_Chest_NumberPlate",
+      "BF_Chest_Interior",
+      "BF_Chest_LidPivot",
+      "BF_Chest_Lid",
+      "BF_UI_NumberAnchor",
+      "BF_UI_AmountAnchor",
+      "BF_FX_RewardAnchor",
+      "BF_FX_DustAnchor",
+      "BF_SFX_LatchAnchor"
+    ],
+    "required_actions": [
+      "Chest_Idle",
+      "Chest_Hover",
+      "Chest_Selected",
+      "Chest_Shake",
+      "Chest_Open",
+      "Chest_RewardHold"
+    ],
+    "max_triangles": 30000,
+    "max_materials": 3,
+    "max_texture_size": 2048,
+    "require_uv": true,
+    "require_material": true,
+    "allow_non_manifold": false,
+    "scale_tolerance": 0.001,
+    "name_pattern": "^[A-Za-z0-9_]+$",
+    "pivot_rules": [
+      {
+        "object": "BF_Chest_LidPivot",
+        "relative_to": "BF_Chest_LidRear",
+        "axis_expectations": {
+          "x": "center",
+          "y": "center",
+          "z": "min"
+        },
+        "tolerance": 0.12
+      }
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "blender_version": "5.2.0 LTS",
+  "blend_file": "D:\\CRepository\\BubbleFortune\\art\\stage-basic\\source\\display_stage_26_v007.blend",
+  "collection": "EXPORT",
+  "summary": {
+    "objects": 30,
+    "mesh_objects": 4,
+    "triangles": 39792,
+    "materials": 4,
+    "textures": 0,
+    "actions": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "mesh_stats": [
+    {
+      "name": "Stage_Indigo",
+      "triangles": 11124,
+      "vertices": 5628,
+      "polygons": 5562,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Indigo"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        28.0,
+        22.0,
+        10.65
+      ]
+    },
+    {
+      "name": "Stage_Champagne",
+      "triangles": 22080,
+      "vertices": 11200,
+      "polygons": 12114,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Champagne"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        24.505545,
+        11.939668,
+        10.54
+      ]
+    },
+    {
+      "name": "Stage_Porcelain",
+      "triangles": 5616,
+      "vertices": 2912,
+      "polygons": 2808,
+      "uv_layers": 1,
+      "materials": [
+        "Stage_Porcelain"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        14.283171,
+        14.201397,
+        5.7125
+      ]
+    },
+    {
+      "name": "Wall_Inset",
+      "triangles": 972,
+      "vertices": 504,
+      "polygons": 486,
+      "uv_layers": 1,
+      "materials": [
+        "Wall_Inset"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        16.583866,
+        15.765881,
+        3.95
+      ]
+    }
+  ],
+  "materials": [
+    "Stage_Champagne",
+    "Stage_Indigo",
+    "Stage_Porcelain",
+    "Wall_Inset"
+  ],
+  "textures": [],
+  "actions": [],
+  "errors": [],
+  "warnings": [],
+  "config": {
+    "collection": "EXPORT",
+    "required_objects": [],
+    "required_actions": [],
+    "max_triangles": 45000,
+    "max_materials": 6,
+    "max_texture_size": 2048,
+    "require_uv": true,
+    "require_material": true,
+    "allow_non_manifold": false,
+    "scale_tolerance": 0.001,
+    "name_pattern": "^[A-Za-z0-9_]+$",
+    "pivot_rules": []
+  }
+}

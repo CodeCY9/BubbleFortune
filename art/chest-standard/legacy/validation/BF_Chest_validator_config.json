@@ -1,0 +1,48 @@
+{
+  "collection": "EXPORT",
+  "required_objects": [
+    "BF_Chest_Root",
+    "BF_Chest_Base",
+    "BF_Chest_Body",
+    "BF_Chest_Trim",
+    "BF_Chest_Corners",
+    "BF_Chest_Latch",
+    "BF_Chest_NumberPlate",
+    "BF_Chest_Interior",
+    "BF_Chest_LidPivot",
+    "BF_Chest_Lid",
+    "BF_UI_NumberAnchor",
+    "BF_UI_AmountAnchor",
+    "BF_FX_RewardAnchor",
+    "BF_FX_DustAnchor",
+    "BF_SFX_LatchAnchor"
+  ],
+  "required_actions": [
+    "Chest_Idle",
+    "Chest_Hover",
+    "Chest_Selected",
+    "Chest_Shake",
+    "Chest_Open",
+    "Chest_RewardHold"
+  ],
+  "max_triangles": 30000,
+  "max_materials": 3,
+  "max_texture_size": 2048,
+  "require_uv": true,
+  "require_material": true,
+  "allow_non_manifold": false,
+  "scale_tolerance": 0.001,
+  "name_pattern": "^[A-Za-z0-9_]+$",
+  "pivot_rules": [
+    {
+      "object": "BF_Chest_LidPivot",
+      "relative_to": "BF_Chest_LidRear",
+      "axis_expectations": {
+        "x": "center",
+        "y": "center",
+        "z": "min"
+      },
+      "tolerance": 0.12
+    }
+  ]
+}

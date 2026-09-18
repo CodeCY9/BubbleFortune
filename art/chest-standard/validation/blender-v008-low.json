@@ -1,0 +1,226 @@
+{
+  "status": "PASS",
+  "blender_version": "5.2.0 LTS",
+  "blend_file": "D:\\CRepository\\BubbleFortune\\art\\chest-standard\\source\\briefcase_v008_low.blend",
+  "collection": "EXPORT",
+  "summary": {
+    "objects": 19,
+    "mesh_objects": 10,
+    "triangles": 5710,
+    "materials": 3,
+    "textures": 0,
+    "actions": 24,
+    "errors": 0,
+    "warnings": 0
+  },
+  "mesh_stats": [
+    {
+      "name": "BF_Case_Tilt_Case_Lacquer",
+      "triangles": 752,
+      "vertices": 388,
+      "polygons": 514,
+      "uv_layers": 1,
+      "materials": [
+        "Case_Lacquer"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.400147,
+        0.780123,
+        0.109756
+      ]
+    },
+    {
+      "name": "BF_Case_Tilt_Interior",
+      "triangles": 338,
+      "vertices": 173,
+      "polygons": 227,
+      "uv_layers": 1,
+      "materials": [
+        "Interior"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.279308,
+        0.893,
+        0.05519
+      ]
+    },
+    {
+      "name": "BF_Case_Tilt_Champagne_Trim",
+      "triangles": 1620,
+      "vertices": 832,
+      "polygons": 1046,
+      "uv_layers": 1,
+      "materials": [
+        "Champagne_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.400001,
+        0.981314,
+        0.159781
+      ]
+    },
+    {
+      "name": "BF_Case_LidPivot_Case_Lacquer",
+      "triangles": 752,
+      "vertices": 388,
+      "polygons": 515,
+      "uv_layers": 1,
+      "materials": [
+        "Case_Lacquer"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.400147,
+        0.780123,
+        0.104756
+      ]
+    },
+    {
+      "name": "BF_Case_LidPivot_Interior",
+      "triangles": 188,
+      "vertices": 96,
+      "polygons": 98,
+      "uv_layers": 1,
+      "materials": [
+        "Interior"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.28,
+        0.65,
+        0.012
+      ]
+    },
+    {
+      "name": "BF_Case_LidPivot_Champagne_Trim",
+      "triangles": 1308,
+      "vertices": 672,
+      "polygons": 909,
+      "uv_layers": 1,
+      "materials": [
+        "Champagne_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        1.4,
+        0.776492,
+        0.113389
+      ]
+    },
+    {
+      "name": "BF_Latch_0_Champagne_Trim",
+      "triangles": 188,
+      "vertices": 96,
+      "polygons": 98,
+      "uv_layers": 1,
+      "materials": [
+        "Champagne_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.12,
+        0.04,
+        0.09
+      ]
+    },
+    {
+      "name": "BF_Latch_0_Interior",
+      "triangles": 188,
+      "vertices": 96,
+      "polygons": 98,
+      "uv_layers": 1,
+      "materials": [
+        "Interior"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.047,
+        0.008,
+        0.035
+      ]
+    },
+    {
+      "name": "BF_Latch_1_Champagne_Trim",
+      "triangles": 188,
+      "vertices": 96,
+      "polygons": 98,
+      "uv_layers": 1,
+      "materials": [
+        "Champagne_Trim"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.12,
+        0.04,
+        0.09
+      ]
+    },
+    {
+      "name": "BF_Latch_1_Interior",
+      "triangles": 188,
+      "vertices": 96,
+      "polygons": 98,
+      "uv_layers": 1,
+      "materials": [
+        "Interior"
+      ],
+      "non_manifold_edges": 0,
+      "dimensions": [
+        0.047,
+        0.008,
+        0.035
+      ]
+    }
+  ],
+  "materials": [
+    "Case_Lacquer",
+    "Champagne_Trim",
+    "Interior"
+  ],
+  "textures": [],
+  "actions": [
+    "Chest_Hover_BF_Case_LidPivot",
+    "Chest_Hover_BF_Case_Tilt",
+    "Chest_Hover_BF_Latch_0",
+    "Chest_Hover_BF_Latch_1",
+    "Chest_Idle_BF_Case_LidPivot",
+    "Chest_Idle_BF_Case_Tilt",
+    "Chest_Idle_BF_Latch_0",
+    "Chest_Idle_BF_Latch_1",
+    "Chest_Open_BF_Case_LidPivot",
+    "Chest_Open_BF_Case_Tilt",
+    "Chest_Open_BF_Latch_0",
+    "Chest_Open_BF_Latch_1",
+    "Chest_RewardHold_BF_Case_LidPivot",
+    "Chest_RewardHold_BF_Case_Tilt",
+    "Chest_RewardHold_BF_Latch_0",
+    "Chest_RewardHold_BF_Latch_1",
+    "Chest_Selected_BF_Case_LidPivot",
+    "Chest_Selected_BF_Case_Tilt",
+    "Chest_Selected_BF_Latch_0",
+    "Chest_Selected_BF_Latch_1",
+    "Chest_Shake_BF_Case_LidPivot",
+    "Chest_Shake_BF_Case_Tilt",
+    "Chest_Shake_BF_Latch_0",
+    "Chest_Shake_BF_Latch_1"
+  ],
+  "errors": [],
+  "warnings": [],
+  "config": {
+    "collection": "EXPORT",
+    "required_objects": [],
+    "required_actions": [],
+    "max_triangles": 30000,
+    "max_materials": 3,
+    "max_texture_size": 2048,
+    "require_uv": true,
+    "require_material": true,
+    "allow_non_manifold": false,
+    "scale_tolerance": 0.001,
+    "name_pattern": "^[A-Za-z0-9_]+$",
+    "pivot_rules": []
+  }
+}

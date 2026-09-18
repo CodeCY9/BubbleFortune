@@ -1,0 +1,15 @@
+[
+  {
+    "antipattern": "side-tab",
+    "name": "Side-tab accent border",
+    "description": "Thick colored border on one side of a card — the most recognizable tell of AI-generated UIs. Use a subtler accent or remove it entirely.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "D:\\CRepository\\BubbleFortune\\src\\components\\BankerModal.tsx",
+    "line": 281,
+    "snippet": "borderLeft: '3px solid",
+    "importedBy": [
+      "App.tsx"
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Blender Web Game Assets"
+  short_description: "Create concepts, Blender models and validated web game assets."
+policy:
+  allow_implicit_invocation: true

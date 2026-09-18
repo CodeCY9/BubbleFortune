@@ -1,0 +1,47 @@
+[
+  {
+    "path": "art/chest-standard/source/briefcase_v009_material.blend",
+    "bytes": 1323745,
+    "sha256": "5bdd1e73441896ba058878dc2be089f182f41fba59ecc95370e448fdc88d85bc"
+  },
+  {
+    "path": "art/chest-standard/source/briefcase_v009_low.blend",
+    "bytes": 1304005,
+    "sha256": "aca1a0457553a0d9464bd5f982bed19486f837c3d4f8c8739e333f787e89290e"
+  },
+  {
+    "path": "art/stage-basic/source/display_stage_16_v007.blend",
+    "bytes": 611687,
+    "sha256": "d938a515ea1ba0586540473bf16a3865798d68dd5c13c5cff23c7e5356d97f00"
+  },
+  {
+    "path": "art/stage-basic/source/display_stage_26_v007.blend",
+    "bytes": 743160,
+    "sha256": "c3327eeded76a6f0775686d2d67553e0e234af712f7a337a52af99a431d12ae2"
+  },
+  {
+    "path": "public/assets/models/runtime/BF_Briefcase_v009.glb",
+    "bytes": 2041564,
+    "sha256": "c4d378cea0bc52bd309e65384596bc3c1e11a53d3d737a033fc12ef427b0c6b4"
+  },
+  {
+    "path": "public/assets/models/runtime/BF_Briefcase_v009_low.glb",
+    "bytes": 1608184,
+    "sha256": "af6cab7b47c4023a9525ca9ecbc6f415a6c9d33d2dd8ea023c8bfc258825cf20"
+  },
+  {
+    "path": "public/assets/models/runtime/BF_DisplayStage_16_v007.glb",
+    "bytes": 1442972,
+    "sha256": "9adc4d3ecc7bf0955f7bc2eb079fea48f46f67fcf56a86a5eece9d28a2ae76cc"
+  },
+  {
+    "path": "public/assets/models/runtime/BF_DisplayStage_26_v007.glb",
+    "bytes": 1917800,
+    "sha256": "2e3e198ac1218eedf3de8256196fbc887e5ad9ce708818b636deb9a579aad592"
+  },
+  {
+    "path": "src/stage-layout.json",
+    "bytes": 9192,
+    "sha256": "da8980d8fc4fd8d0f9474070a8641c330f97cbe4b7e0eb6cfb6d74b2feaafe31"
+  }
+]

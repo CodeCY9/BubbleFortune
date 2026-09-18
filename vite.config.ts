@@ -1,0 +1,41 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    strictPort: true,
+    host: true,
+    open: false,
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:2567',
+        changeOrigin: true,
+      },
+      '/game': {
+        target: 'http://127.0.0.1:2567',
+        ws: true,
+        rewrite: (path) => path.replace(/^\/game/, ''),
+      },
+    },
+  },
+  preview: {
+    port: 3000,
+    strictPort: true,
+    host: true,
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:2567',
+        changeOrigin: true,
+      },
+      '/game': {
+        target: 'http://127.0.0.1:2567',
+        ws: true,
+        rewrite: (path) => path.replace(/^\/game/, ''),
+      },
+    },
+  },
+});
+

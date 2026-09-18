@@ -11,7 +11,7 @@ import {
 import { DatabaseManager } from '../persistence/db';
 import { OutboxManager } from '../persistence/outbox';
 import { parseCookies } from '../http/cookies';
-import { getClientIp, hashDeviceFingerprint, hashRiskFingerprint } from '../http/security';
+import { getClientIp, hashDeviceFingerprint, hashRiskFingerprint, isRequestOriginAllowed } from '../http/security';
 import { normalizeRoomThemeId, type RoomThemeId } from '../../../../packages/protocol/src/theme';
 
 interface SeatBinding {
@@ -348,7 +348,7 @@ export class AuctionRoom extends Room {
 
   public verifyClientUpgrade(req: http.IncomingMessage, allowedOrigins?: Set<string>): boolean {
     const origin = req.headers.origin;
-    if (origin && allowedOrigins && !allowedOrigins.has(origin)) {
+    if (origin && allowedOrigins && !isRequestOriginAllowed(origin, req, allowedOrigins)) {
       return false;
     }
     return true;
@@ -369,7 +369,8 @@ export class AuctionRoom extends Room {
 
   async onAuth(client: Client, options: any, context?: any) {
     const origin = context?.headers?.origin || context?.req?.headers?.origin;
-    if (origin && this.allowedOrigins && !this.allowedOrigins.has(origin)) {
+    const req = context?.req || { headers: { host: (context?.headers?.host as string) || '' } };
+    if (origin && this.allowedOrigins && !isRequestOriginAllowed(origin, req as any, this.allowedOrigins)) {
       throw new Error('Invalid Origin');
     }
 

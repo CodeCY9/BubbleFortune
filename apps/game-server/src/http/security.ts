@@ -11,6 +11,78 @@ export function isValidId(id: string): boolean {
   return typeof id === 'string' && ID_REGEX.test(id);
 }
 
+/**
+ * Determines whether the request origin is allowed.
+ * Supports:
+ * 1. Explicit whitelisted origins (allowedOrigins Set).
+ * 2. Automatic same-origin detection based on Host and X-Forwarded-Host headers.
+ * 3. Mobile/client same-origin requests without Origin (via Referer or Sec-Fetch-Site).
+ */
+export function isRequestOriginAllowed(
+  origin: string | undefined,
+  req: http.IncomingMessage,
+  allowedOrigins: Set<string>
+): boolean {
+  const hostHeader = ((req.headers['x-forwarded-host'] as string) || req.headers.host || '').trim();
+
+  if (origin) {
+    if (allowedOrigins.has(origin)) return true;
+    const cleanOrigin = origin.replace(/\/+$/, '');
+    if (allowedOrigins.has(cleanOrigin)) return true;
+
+    // Check same-origin against Host / X-Forwarded-Host
+    if (hostHeader) {
+      try {
+        const originUrl = new URL(origin);
+        // Direct host match (domain:port vs domain:port)
+        if (originUrl.host.toLowerCase() === hostHeader.toLowerCase()) {
+          return true;
+        }
+        // Match ignoring standard HTTP(S) default ports (80 / 443)
+        const hostWithoutPort = hostHeader.replace(/:(80|443)$/, '').toLowerCase();
+        const originHostname = originUrl.hostname.toLowerCase();
+        const originPort = originUrl.port;
+        if ((originPort === '' || originPort === '80' || originPort === '443') && hostWithoutPort === originHostname) {
+          return true;
+        }
+      } catch {
+        return false;
+      }
+    }
+    return false;
+  }
+
+  // When Origin is absent, check if Referer indicates a same-origin or allowed-origin request
+  const referer = req.headers.referer;
+  if (referer) {
+    try {
+      const refUrl = new URL(referer);
+      if (allowedOrigins.has(refUrl.origin) || allowedOrigins.has(refUrl.origin.replace(/\/+$/, ''))) {
+        return true;
+      }
+      if (hostHeader) {
+        if (refUrl.host.toLowerCase() === hostHeader.toLowerCase()) {
+          return true;
+        }
+        const hostWithoutPort = hostHeader.replace(/:(80|443)$/, '').toLowerCase();
+        const refHostname = refUrl.hostname.toLowerCase();
+        const refPort = refUrl.port;
+        if ((refPort === '' || refPort === '80' || refPort === '443') && hostWithoutPort === refHostname) {
+          return true;
+        }
+      }
+    } catch {}
+  }
+
+  // Sec-Fetch-Site browser metadata header (supported by modern mobile/desktop browsers)
+  const secFetchSite = req.headers['sec-fetch-site'];
+  if (secFetchSite === 'same-origin') {
+    return true;
+  }
+
+  return false;
+}
+
 export function parsePagination(url: URL): {
   valid: true;
   limit: number;

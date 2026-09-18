@@ -28,18 +28,28 @@ export function createAppServer(options: AppServerOptions = {}) {
     'http://localhost:3000',
     'http://127.0.0.1:3000'
   ]);
+  const addOrigin = (raw: string) => {
+    const trimmed = raw.trim();
+    if (!trimmed) return;
+    allowedOrigins.add(trimmed);
+    const withoutSlash = trimmed.replace(/\/+$/, '');
+    allowedOrigins.add(withoutSlash);
+    try {
+      const u = new URL(withoutSlash);
+      allowedOrigins.add(u.origin);
+    } catch {}
+  };
   if (process.env.PUBLIC_ORIGIN) {
-    allowedOrigins.add(process.env.PUBLIC_ORIGIN);
+    addOrigin(process.env.PUBLIC_ORIGIN);
   }
   if (process.env.ALLOWED_ORIGINS) {
     for (const origin of process.env.ALLOWED_ORIGINS.split(',')) {
-      const trimmed = origin.trim();
-      if (trimmed) allowedOrigins.add(trimmed);
+      addOrigin(origin);
     }
   }
   if (options.publicOrigins) {
     for (const origin of options.publicOrigins) {
-      if (origin) allowedOrigins.add(origin);
+      addOrigin(origin);
     }
   }
 

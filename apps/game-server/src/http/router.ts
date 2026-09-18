@@ -11,7 +11,8 @@ import {
   hashRiskFingerprint,
   verifyAdminHeaderToken,
   generateAdminSessionCookie,
-  verifyAdminSessionCookie
+  verifyAdminSessionCookie,
+  isRequestOriginAllowed
 } from './security';
 import type { RankingBoard } from '../../../../packages/protocol/src/ranking';
 
@@ -70,13 +71,14 @@ export function createHttpHandler(options: RouterOptions) {
       return false; // Not handled by this router
     }
 
-    const hostHeader = req.headers.host || '127.0.0.1';
+    const hostHeader = (req.headers['x-forwarded-host'] as string) || req.headers.host || '127.0.0.1';
     const parsedUrl = new URL(urlStr, `http://${hostHeader}`);
     const pathname = parsedUrl.pathname;
     const origin = req.headers.origin;
+    const originAllowed = isRequestOriginAllowed(origin, req, allowedOrigins);
 
     const corsHeaders: Record<string, string> = {};
-    if (origin && allowedOrigins.has(origin)) {
+    if (origin && originAllowed) {
       corsHeaders['Access-Control-Allow-Origin'] = origin;
       corsHeaders['Access-Control-Allow-Credentials'] = 'true';
       corsHeaders['Access-Control-Allow-Methods'] = 'GET, POST, PATCH, OPTIONS';
@@ -94,17 +96,15 @@ export function createHttpHandler(options: RouterOptions) {
 
     // Origin check: mutating POST and PATCH requests strictly require allowed origin if sent, and required for guest endpoints
     if (req.method === 'POST' || req.method === 'PATCH') {
-      if (origin && !allowedOrigins.has(origin)) {
-        sendError(res, 403, 'INVALID_ORIGIN', 'Origin is required and must be allowed', corsHeaders);
-        return true;
-      }
-      if (!origin && !pathname.startsWith('/api/admin')) {
+      if (!originAllowed && !pathname.startsWith('/api/admin')) {
         sendError(res, 403, 'INVALID_ORIGIN', 'Origin is required and must be allowed', corsHeaders);
         return true;
       }
     }
 
-    const isSecure = process.env.NODE_ENV === 'production';
+    const forwardedProto = req.headers['x-forwarded-proto'];
+    const isHttps = forwardedProto === 'https' || (req.socket as any)?.encrypted === true || (origin ? origin.startsWith('https:') : false);
+    const isSecure = isHttps || (process.env.NODE_ENV === 'production' && forwardedProto !== 'http' && (!origin || !origin.startsWith('http:')));
 
     // Helper: authenticate guest from cookie
     const getAuthenticatedGuest = async (): Promise<{
